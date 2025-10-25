@@ -4,74 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParallaxWebsit</title>
+    <title>Interactive Parallax Showcase</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <section class="pimg1">
-        <div class="ptext">
-            <span class="textbg">
-                Parallax Website
-            </span>
-        </div>
-    </section>
-    <section class=" section section-light">
-        <h2>Section One</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dignissimos quae expedita excepturi
-            ratione nostrum magnam nisi facilis magni deleniti placeat sint dolorum. Odit porro id ullam perspiciatis
-            ratione excepturi fugiat nihil voluptatum, officiis, deleniti, repudiandae beatae neque. Quaerat fugiat
-            perspiciatis, enim, amet non nobis hic iure accusantium tempore eaque aliquam iusto alias excepturi. Quo
-            nihil deserunt, nostrum repudiandae fugit eaque excepturi culpa porro quisquam hic laborum sequi ullam.
-            Reprehenderit ratione enim quos, dolorem repellat, quam vero placeat aut, illo omnis quo commodi eos. Enim,
-            recusandae, consequuntur fugit debitis nulla vero odit sunt nisi obcaecati ipsa repudiandae voluptates omnis
-            eaque?</p>
-    </section>
-    <section class="pimg3">
-        <div class="ptext">
-            <span class="textbg">
-                Explore Nature
-            </span>
-        </div>
-    </section>
-    <section class=" section section-dark">
-        <h2>Section Two</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dignissimos quae expedita excepturi
-            ratione nostrum magnam nisi facilis magni deleniti placeat sint dolorum. Odit porro id ullam perspiciatis
-            ratione excepturi fugiat nihil voluptatum, officiis, deleniti, repudiandae beatae neque. Quaerat fugiat
-            perspiciatis, enim, amet non nobis hic iure accusantium tempore eaque aliquam iusto alias excepturi. Quo
-            nihil deserunt, nostrum repudiandae fugit eaque excepturi culpa porro quisquam hic laborum sequi ullam.
-            Reprehenderit ratione enim quos, dolorem repellat, quam vero placeat aut, illo omnis quo commodi eos. Enim,
-            recusandae, consequuntur fugit debitis nulla vero odit sunt nisi obcaecati ipsa repudiandae voluptates omnis
-            eaque?</p>
-    </section>
 
-    <section class="pimg2">
-        <div class="ptext">
-            <span class="textbg">
-                Explore Nature
-            </span>
-        </div>
-    </section>
-    <section class=" section section-dark">
-        <h2>Section Three</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dignissimos quae expedita excepturi
-            ratione nostrum magnam nisi facilis magni deleniti placeat sint dolorum. Odit porro id ullam perspiciatis
-            ratione excepturi fugiat nihil voluptatum, officiis, deleniti, repudiandae beatae neque. Quaerat fugiat
-            perspiciatis, enim, amet non nobis hic iure accusantium tempore eaque aliquam iusto alias excepturi. Quo
-            nihil deserunt, nostrum repudiandae fugit eaque excepturi culpa porro quisquam hic laborum sequi ullam.
-            Reprehenderit ratione enim quos, dolorem repellat, quam vero placeat aut, illo omnis quo commodi eos. Enim,
-            recusandae, consequuntur fugit debitis nulla vero odit sunt nisi obcaecati ipsa repudiandae voluptates omnis
-            eaque?</p>
-    </section>
-    <section class="pimg1">
-        <div class="ptext">
-            <span class="textbg">
-                by: Rishabh Gupta
-            </span>
-        </div>
-    </section>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <nav class="main-nav">
+        <div class="nav-content">
+            <span id="welcome-message">Parallax Universe</span>
+            <div class="controls">
+                <button id="login-btn" class="nav-button">Login</button>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-checkbox" aria-label="Toggle Dark/Light Mode">
+                        <input type="checkbox" id="theme-checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section parallax-scene">
+        <div class="scene-overlay"></div>
+        <h1 class="hero-title parallax-element" data-speed="0.6">Journey Through Dimensions</h1>
+        <p class="hero-subtitle parallax-element" data-speed="0.3">Experience depth and motion with every scroll.</p>
+    </header>
+
+    <main id="main-content">
+        <section class="content-section about-us">
+            <div class="container">
+                <h2>About Parallax</h2>
+                <p>Parallax scrolling is a cutting-edge web design technique that creates an illusion of depth by moving
+                    background images at a slower rate than the foreground elements. This subtle yet powerful effect
+                    adds a cinematic quality to your website, making it more engaging and memorable for visitors.</p>
+            </div>
+        </section>
+
+        <section class="parallax-scene scene-one">
+            <div class="scene-overlay"></div>
+            <h2 class="scene-title parallax-element" data-speed="0.5">Enchanted Forests</h2>
+            <p class="scene-description parallax-element" data-speed="0.25">A magical journey awaits amidst ancient
+                trees.</p>
+            <div class="forest-creature parallax-element" data-speed="-0.4"></div>
+        </section>
+
+        <section class="content-section api-section">
+            <div class="container">
+                <h2>NASA's Picture of the Day</h2>
+                <div id="api-data-container">
+                    <div class="api-image-container">
+                        <div id="api-loader" class="loader"></div>
+                        <img id="api-image" src="" alt="NASA Picture of the Day" hidden>
+                    </div>
+                    <div class="api-text-content">
+                        <h3 id="api-title">Loading Image...</h3>
+                        <p id="api-explanation"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section chart-section">
+            <div class="container">
+                <h2>Planetary Resource Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="resourceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-scene scene-two">
+            <div class="scene-overlay"></div>
+            <h2 class="scene-title parallax-element" data-speed="0.5">Cosmic Wonders</h2>
+            <p class="scene-description parallax-element" data-speed="0.25">Explore the vastness of the universe from
+                your screen.</p>
+            <div class="floating-nebula parallax-element" data-speed="-0.3"></div>
+        </section>
+
+        <section class="content-section real-time-section">
+            <div class="container">
+                <h2>Connectivity Status</h2>
+                <div class="live-data-panel">
+                    <h3>Network Monitor</h3>
+                    <p id="connection-status">
+                        <span class="status-dot"></span>
+                        <span id="connection-text">Checking...</span>
+                    </p>
+                    <p id="connection-speed">Speed: N/A</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-section">
+        <p>&copy; 2025 Parallax Showcase. All rights reserved.</p>
+    </footer>
+
+    <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-content" role="document">
+            <button id="close-modal-btn" class="close-button" aria-label="Close dialog">&times;</button>
+            <h2 id="modal-title">Portal Access</h2>
+            <form id="login-form" novalidate>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <small class="validation-message" id="username-validation">Must be at least 4 characters
+                        long.</small>
+                </div>
+                <div class="form-group password-group">
+                    <label for="password">Create Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" id="toggle-password-btn" class="toggle-password" aria-label="Show password">
+                        <img id="toggle-password-icon"
+                            src="https://img.icons8.com/?size=100&id=85344&format=png&color=000000"
+                            alt="Show/Hide Password">
+                    </button>
+                    <small class="validation-message" id="password-validation">8+ chars, with uppercase, lowercase, and
+                        number.</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <small class="validation-message" id="confirm-password-validation">Passwords must match.</small>
+                </div>
+                <button type="submit" id="submit-login-btn" class="modal-button" disabled>Authenticate</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
